@@ -20,4 +20,4 @@ python3 gui.py || error_exit "Error: Failed to run the application."
     
 
 # Exit with success code
-exit 1
+exit 0
