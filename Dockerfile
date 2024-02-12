@@ -15,11 +15,11 @@ COPY . /app
 
 # Run build script
 RUN apk add --no-cache python3
-RUN ls -l /app
+# RUN ls -l /app
 RUN chmod +x build.sh
-RUN ls -l /app
-RUN pwd
-RUN dos2unix build.sh
+# RUN ls -l /app
+# RUN pwd
+# RUN dos2unix build.sh
 RUN ./build.sh
 
 # Define the command to run your application so replace inside the brackets with the command you want to use 
