@@ -22,7 +22,7 @@ jobs:
 
       - name: Build container
         run: |
-          podman build -t hello-world .
+          podman build -t my-podman-image .
 
       - name: Run container
         run: |
