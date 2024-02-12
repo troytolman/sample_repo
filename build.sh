@@ -15,8 +15,8 @@ fi
 
 
 # Run the Python GUI application
-python3 gui.py #|| error_exit "Error: Failed to run the application."
-
+# python3 gui.py || error_exit "Error: Failed to run the application."
+xvfb-run --server-args "-screen 0 1024x768x24" python3 gui.py
     
 
 # Exit with success code
