@@ -11,13 +11,13 @@ WORKDIR /app
 COPY . /app
 
 # Copy the build script
-COPY build.sh /app/scripts/build.sh
+#COPY build.sh /app/scripts/build.sh
 
 # Set execute permissions for the build script
-RUN chmod +x /app/scripts/build.sh
+RUN chmod +x /app/build.sh
 
 # Run the build script
-RUN /app/scripts/build.sh
+RUN /app/build.sh
 
 # Define the command to run your application
 CMD ["podman", "run", "--rm", "hello-world"]
