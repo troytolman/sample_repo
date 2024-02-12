@@ -17,7 +17,7 @@ COPY build.sh /app/scripts/build.sh
 RUN apk add --no-cache python3
 # RUN ls -l /app
 RUN chmod +x /app/scripts/build.sh
-# RUN ls -l /app
+RUN ls -l /app
 # RUN pwd
 # RUN dos2unix build.sh
 RUN .//app/scripts/build.sh
