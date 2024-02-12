@@ -48,9 +48,9 @@ button.pack()
 currentMode = tk.Label(window, text = "")
 currentMode.pack()
 
-#tkinter event loop. .listens for events and blocks code that comes after it from running until you close the window where you called the method
-window.mainloop()
-
 # Stop the virtual display when the GUI loop exits
 if is_headless:
     display.stop()
+
+#tkinter event loop. .listens for events and blocks code that comes after it from running until you close the window where you called the method
+window.mainloop()
