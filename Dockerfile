@@ -12,12 +12,16 @@ COPY . /app
 
 # Expose any necessary ports
 # Example: EXPOSE 8080
-
-RUN chmod +x build.sh
+COPY build.sh /app/scripts/build.sh
+# RUN ls -l /app
+RUN chmod +x /app/scripts/build.sh
+RUN ls -l /app
+RUN ls -l /app/scripts
+RUN cat /app/scripts/build.sh
 
 # RUN pwd
 # RUN dos2unix build.sh
-RUN build.sh
+RUN /app/scripts/build.sh
 
 # Define the command to run your application so replace inside the brackets with the command you want to use 
 CMD ["podman", "run", "--rm", "hello-world"] 
