@@ -14,6 +14,7 @@ COPY . /app
 # Example: EXPOSE 8080
 
 # Run build script
+RUN ls -l /app
 RUN chmod +x build.sh
 RUN dos2unix build.sh
 RUN ./build.sh
