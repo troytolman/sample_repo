@@ -1,10 +1,15 @@
 import tkinter as tk
 import os
 
-# Check if DISPLAY environment variable is set
+# Check if DISPLAY environment variable is not set
 if "DISPLAY" not in os.environ:
-    print("No display available. Exiting.")
-    exit(0)
+    # Start a virtual display
+    from pyvirtualdisplay import Display
+    display = Display(visible=0, size=(800, 600))
+    display.start()
+    is_headless = True
+else:
+    is_headless = False
 
 # Proceed with GUI initialization
 window = tk.Tk()
@@ -45,3 +50,7 @@ currentMode.pack()
 
 #tkinter event loop. .listens for events and blocks code that comes after it from running until you close the window where you called the method
 window.mainloop()
+
+# Stop the virtual display when the GUI loop exits
+if is_headless:
+    display.stop()
