@@ -4,7 +4,7 @@ import os
 # Check if DISPLAY environment variable is set
 if "DISPLAY" not in os.environ:
     print("No display available. Exiting.")
-    exit(1)
+    exit(0)
 
 # Proceed with GUI initialization
 window = tk.Tk()
