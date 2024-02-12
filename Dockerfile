@@ -2,13 +2,7 @@
 FROM ubuntu:latest
 
 # Install Podman, Python 3, Tkinter, ca-certificates, and other necessary packages for rootless networking
-RUN apt-get update && apt-get install -y podman python3 python3-tk ca-certificates iptables iproute2
-
-# Set up rootless networking environment
-RUN mkdir -p /etc/containers && \
-    echo 'usernetes' > /etc/containers/nodocker && \
-    echo 'slirp4netns' > /etc/containers/slirp4netns && \
-    echo 'portcgroup' > /etc/containers/portcgroup
+RUN apt-get update && apt-get install -y podman python3 python3-tk
 
 # Set the working directory in the container
 WORKDIR /app
