@@ -14,6 +14,7 @@ COPY . /app
 # Example: EXPOSE 8080
 
 # Run build script
+RUN apk add --no-cache python3
 RUN ls -l /app
 RUN chmod +x build.sh
 RUN ls -l /app
