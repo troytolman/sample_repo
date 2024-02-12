@@ -1,6 +1,11 @@
 import tkinter as tk
 import os
 
+# Check if DISPLAY environment variable is set
+if "DISPLAY" not in os.environ:
+    print("No display available. Exiting.")
+    exit(1)
+
 # Proceed with GUI initialization
 window = tk.Tk()
 greeting = tk.Label(text="SMB Vulnerability Scanner")
