@@ -16,6 +16,12 @@ window = tk.Tk()
 greeting = tk.Label(text="SMB Vulnerability Scanner")
 greeting.pack()
 
+# Stop the virtual display when the GUI loop exits
+if is_headless:
+    display.stop()
+    exit()
+
+
 # Called when the button to start the vulnerability scanner is clicked
 def button_clicked():
     print("Button clicked")
@@ -50,8 +56,3 @@ currentMode.pack()
 
 #tkinter event loop. .listens for events and blocks code that comes after it from running until you close the window where you called the method
 window.mainloop()
-
-# Stop the virtual display when the GUI loop exits
-if is_headless:
-    display.stop()
-    exit()
