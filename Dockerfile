@@ -2,7 +2,7 @@
 FROM ubuntu:latest
 
 # Install Podman, Python 3, Tkinter, ca-certificates, and other necessary packages for rootless networking
-RUN apt-get update && apt-get install -y podman python3 python3-tk xvfb
+RUN apt-get update && apt-get install -y podman python3 python3-tk xvfb python3-pip
 
 # Set the working directory in the container
 WORKDIR /app
