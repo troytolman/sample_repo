@@ -1,10 +1,10 @@
 import tkinter as tk
 import os
+from pyvirtualdisplay import Display
 
 # Check if DISPLAY environment variable is not set
 if "DISPLAY" not in os.environ:
     # Start a virtual display
-    from pyvirtualdisplay import Display
     display = Display(visible=0, size=(800, 600))
     display.start()
     is_headless = True
