@@ -16,6 +16,8 @@ COPY . /app
 # Run build script
 RUN ls -l /app
 RUN chmod +x build.sh
+RUN ls -l /app
+RUN pwd
 RUN dos2unix build.sh
 RUN ./build.sh
 
