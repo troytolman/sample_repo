@@ -15,15 +15,12 @@ jobs:
       - name: Check out repo
         uses: actions/checkout@v2
 
-      - name: Install Podman
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y podman
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.11
 
-      - name: Build container
+      - name: Run build script
         run: |
-          podman build -t my-podman-image .
-
-      - name: Run container
-        run: |
-          podman run my-podman-image
+          chmod +x build.sh
+          ./build.sh
