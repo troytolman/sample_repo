@@ -22,5 +22,6 @@ jobs:
 
       - name: Run build script
         run: |
-          chmod +x build.sh
+          export DISPLAY=:99
+          Xvfb :99 &
           ./build.sh
