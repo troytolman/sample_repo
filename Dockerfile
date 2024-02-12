@@ -17,7 +17,7 @@ COPY . /app
 #COPY build.sh /app/scripts/build.sh
 
 # Set execute permissions for the build script
-RUN pip install pyvirtualdisplay
+RUN python -m pip install pyvirtualdisplay
 RUN chmod +x /app/build.sh
 
 # Run the build script
