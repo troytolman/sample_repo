@@ -5,7 +5,8 @@ from pyvirtualdisplay import Display
 # Check if DISPLAY environment variable is not set
 if "DISPLAY" not in os.environ:
     # Start a virtual display
-    display = Display(visible=False).start()
+    display = Display(visible=False)
+    display.start()
     is_headless = True
 else:
     is_headless = False
