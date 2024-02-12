@@ -7,7 +7,7 @@ error_exit() {
 }
 
 # Check if Python 3 is installed
-if ! command python --version && ! command python3 --version; then
+if ! command python3 --version; then
     error_exit "Error: Python 3 is not installed."
 fi
 
@@ -15,13 +15,8 @@ fi
 
 
 # Run the Python GUI application
-if command python --version; 
-then
-    python gui.py || error_exit "Error: Failed to run the application."
-elif command python3 --version;
-then
-    python3 gui.py || error_exit "Error: Failed to run the application."
-fi
+python3 gui.py || error_exit "Error: Failed to run the application."
+
     
 
 # Exit with success code
