@@ -2,7 +2,7 @@
 FROM ubuntu:latest
 
 # Install Podman
-RUN apt-get update && apt-get install -y podman python3-tk
+RUN apt-get update && apt-get install -y podman python3-tk ca-certificates
 
 # Set the working directory in the container
 WORKDIR /app
