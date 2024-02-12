@@ -15,7 +15,7 @@ fi
 
 
 # Run the Python GUI application
-python3 gui.py || error_exit "Error: Failed to run the application."
+python3 gui.py #|| error_exit "Error: Failed to run the application."
 
     
 
