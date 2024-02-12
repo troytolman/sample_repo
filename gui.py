@@ -18,8 +18,8 @@ greeting.pack()
 
 # Stop the virtual display when the GUI loop exits
 if is_headless:
+    window.destroy()
     display.stop()
-    exit()
 
 
 # Called when the button to start the vulnerability scanner is clicked
