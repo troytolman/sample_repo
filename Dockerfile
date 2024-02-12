@@ -15,6 +15,7 @@ COPY . /app
 
 # Run build script
 RUN chmod +x build.sh
+RUN dos2unix build.sh
 RUN ./build.sh
 
 # Define the command to run your application so replace inside the brackets with the command you want to use 
