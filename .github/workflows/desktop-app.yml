@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Set timezone
         run: |
-          export TZ=UTC
+          export DEBIAN_FRONTEND=noninteractive
       - name: Build container
         run: |
           chmod +x build.sh
