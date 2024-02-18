@@ -12,18 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repo
-        uses: actions/checkout@v2
-
-      - name: Install Podman
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y podman
-
       - name: Build container
         run: |
-          podman build -t my-podman-image .
+          ./build.sh
 
-      - name: Run container
-        run: |
-          podman run hello-world

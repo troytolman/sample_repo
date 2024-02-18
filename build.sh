@@ -6,17 +6,15 @@ error_exit() {
     exit 1
 }
 
-# Check if Python 3 is installed
-if ! command python3 --version; then
-    error_exit "Error: Python 3 is not installed."
-fi
 
-# Install dependencies if needed
+IMAGE_NAME="scanner-app-container"
+DOCKERFILE_PATH="./Dockerfile"
+
+# Build the container image using Podman
+podman build -t $IMAGE_NAME -f $DOCKERFILE_PATH .
 
 
-# Run the Python GUI application
-# python3 gui.py || error_exit "Error: Failed to run the application."
-xvfb-run --server-args "-screen 0 1024x768x24" python3 gui.py
+
     
 
 # Exit with success code

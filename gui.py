@@ -1,25 +1,13 @@
 import tkinter as tk
-import os
-from pyvirtualdisplay import Display
 
-# Check if DISPLAY environment variable is not set
-if "DISPLAY" not in os.environ:
-    # Start a virtual display
-    display = Display(visible=False)
-    display.start()
-    is_headless = True
-else:
-    is_headless = False
-
-# Proceed with GUI initialization
+#initialize the window
 window = tk.Tk()
-greeting = tk.Label(text="SMB Vulnerability Scanner")
-greeting.pack()
 
-# Stop the virtual display when the GUI loop exits
-if is_headless:
-    window.destroy()
-    display.stop()
+#greeting at the top of the window
+greeting = tk.Label(text="SMB Vulnerability Scanner")
+
+#adds the widget to the window
+greeting.pack()
 
 
 # Called when the button to start the vulnerability scanner is clicked
@@ -34,7 +22,6 @@ def show_current_mode():
 # Change the label text
 def show_options():
     dropDown.config( text = clicked.get() )
-
 # Dropdown options
 options = [
     "Full Scan",
