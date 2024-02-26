@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # RUN apt-get update && apt-get install -y python3 python3-tk python3-pip
 
 # RUN pip install pylint
-WORKDIR .
+WORKDIR /
 
 RUN chmod 755 gui.py
 
