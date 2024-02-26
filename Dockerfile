@@ -14,7 +14,7 @@ WORKDIR /app
 COPY . /app
 
 # RUN pylint app/gui.py
-RUN pwd && ls
+RUN ls
 
 # Define the command to run your application
 CMD ["podman", "run", "--rm", "scanner-app-container"]
