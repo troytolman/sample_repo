@@ -12,9 +12,9 @@ COPY . /app
 
 WORKDIR /app
 
-RUN chmod 755 /app/gui.py
+#RUN chmod 755 /app/gui.py
 
-RUN pylint /app/gui.py
+RUN /app/test.sh
 
 # Define the command to run your application
 CMD ["podman", "run", "--rm", "scanner-app-container"]
