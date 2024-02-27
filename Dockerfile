@@ -12,7 +12,7 @@ COPY . /app
 
 WORKDIR /app
 
-#RUN chmod 755 /app/gui.py
+RUN chmod 755 /app/test.sh
 
 RUN /app/test.sh
 
